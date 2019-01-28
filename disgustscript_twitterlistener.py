@@ -9,7 +9,7 @@ KNOWN_CODES = ['BW?Q-Z57Y-PTTS-GLKW', '8WBR-ATJH-R?CX-TYWZ']
 def getTwitter():
     global KNOWN_CODES
     s = urllib2.urlopen('https://mobile.twitter.com/disgusting_men').read()
-    res = re.findall(r'([A-Z0-9\?]*-[A-Z0-9\?]*-[A-Z0-9\?]*-[A-Z0-9\?]*)', s, re.DOTALL)
+    res = re.findall(r'([A-Z0-9\?]{4}-[A-Z0-9\?]{4}-[A-Z0-9\?]{4}-[A-Z0-9\?]{4})', s, re.DOTALL)
     print "Parsed from Twitter:", res
 
     new_codes = []
